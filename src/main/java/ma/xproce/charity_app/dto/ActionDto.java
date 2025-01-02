@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -19,6 +20,7 @@ public class ActionDto {
     private Integer idAction;
     private String titreAction;
     private String Description;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dateCreation;
     private double montantAction;
     private EtatAction etat;

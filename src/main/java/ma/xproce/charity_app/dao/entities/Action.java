@@ -2,6 +2,7 @@ package ma.xproce.charity_app.dao.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 import java.util.List;
@@ -19,6 +20,7 @@ public class Action {
     private Integer idAction;
     private String titreAction;
     private String Description;
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
     private Date dateCreation;
     private double montantAction;
     private EtatAction etat;
